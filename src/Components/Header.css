@@ -1,0 +1,15 @@
+.Header-Container{
+    width: 100%;
+    height: 70px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-Wrapper{
+    width: 80%;
+    height: 100%;
+    /* background-color: hotpink; */
+    border-bottom: 1px solid #ADADAD;
+}

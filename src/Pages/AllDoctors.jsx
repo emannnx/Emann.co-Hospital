@@ -31,6 +31,47 @@ const AllDoctors = () => {
                   </div>
             </div>
             <div className="doctor-hero-Speciality">
+              <h1>Find by Speciality </h1>
+              <p>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+              <div className="Speciality-Container">
+                <div className="card card1">
+                  <div className="Speciality-img-circle">
+
+                  </div>
+                  <p>General physician</p>
+                </div>
+                <div className="card card2">
+                   <div className="Speciality-img-circle">
+
+                  </div>
+                  <p>Gynecologist</p>
+                </div>
+                <div className="card card3">
+                   <div className="Speciality-img-circle">
+
+                  </div>
+                  <p>Dermatologist</p>
+                </div>
+                <div className="card card4">
+                   <div className="Speciality-img-circle">
+
+                  </div>
+                  <p>Pediatricians</p>
+                </div>
+                <div className="card card5">
+                   <div className="Speciality-img-circle">
+
+                  </div>
+                  <p>Neurologist</p>
+                </div>
+                <div className="card card6">
+                   <div className="Speciality-img-circle">
+
+                  </div>
+                  <p>Gastroenterologist</p>
+                </div>
+              </div>
+
             </div>
         </div>
     </div>

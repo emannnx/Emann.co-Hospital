@@ -116,16 +116,70 @@
 }
 
 .doctor-hero-Speciality{
-    width: 80%;
-    height: 300px;
+    width: 60%;
+    height: auto;
     /* background-color: hotpink; */
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    color: #4B5563;
+    margin-top: 20px;
+    text-align: center;
 }
+
+.doctor-hero-Speciality p{
+  text-align: center;
+}
+.Speciality-Container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px; /* space between cards */
+  padding: 20px;
+  /* background-color: green; */
+  justify-items: center;
+}
+
+.card {
+  width: 155px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #4B5563;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Different card colors */
+/* .card1 { background-color: #e74c3c; } */
+/* .card2 { background-color: #3498db; } 
+.card3 { background-color: #2ecc71; } 
+.card4 { background-color: #f1c40f; } 
+.card5 { background-color: #9b59b6; } 
+.card6 { background-color: #e67e22; } */
+
+.Speciality-img-circle{
+  width: 100px;
+  height: 95px;
+  border-radius: 50px;
+  background: linear-gradient(to bottom, #AFC1DC, #E2E5ED);
+}
+
+
 @media (max-width: 1080px) {
   .doctor-hero {
     flex-direction: column;
     padding-top: 20px;
     height: auto; /* flexible */
+    gap: 20px;
+    padding: 20px 0;
   }
 
   .doctor-wrapper {

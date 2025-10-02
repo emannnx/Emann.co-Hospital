@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import LogoIcon from '../assets/IconLogo.png';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,10 +22,10 @@ const Header = () => {
         {/* Nav + Button */}
         <div className={`Nav-Menu ${isOpen ? "open" : ""}`}>
           <div className="Nav-Container">
-            <Link to="/" onClick={() => setIsOpen(false)}>HOME</Link>
-            <Link to="/" onClick={() => setIsOpen(false)}>All DOCTOR</Link>
-            <Link to="/" onClick={() => setIsOpen(false)}>ABOUT</Link>
-            <Link to="/" onClick={() => setIsOpen(false)}>CONTACT</Link>
+            <NavLink to="/" onClick={() => setIsOpen(false)}>HOME</NavLink>
+            <NavLink to="/doctors" onClick={() => setIsOpen(false)}>All DOCTORS</NavLink>
+            <NavLink to="/about" onClick={() => setIsOpen(false)}>ABOUT</NavLink>
+            <NavLink to="/contact" onClick={() => setIsOpen(false)}>CONTACT</NavLink>
           </div>
           <button className='Create-Account-Btn'>Create Account</button>
         </div>

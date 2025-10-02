@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .Header-Wrapper {
@@ -157,9 +158,10 @@
 
   .Menu-Button {
     display: block;
-    position: fixed;   /* fix it so it stays top-right */
-    top: 13px;
-    right: 40px;
+    position: relative;  /* stays inside header */
+    top: 0;
+    right: 0;
+    margin-left: 15px; /* optional spacing */
     color: #1F2937;
   }
 
@@ -168,4 +170,35 @@
     gap: 9px;
     /* background-color: red; */
   }
+}
+
+/* Nav link styles */
+.Nav-Container a {
+  position: relative;
+  font-size: 15px;
+  color: #1F2937;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+/* Hover underline */
+.Nav-Container a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #1F2937;
+  transition: width 0.3s ease;
+}
+
+.Nav-Container a:hover::after {
+  width: 100%;
+}
+
+/* Active page indicator (always underlined) */
+.Nav-Container a.active::after {
+  width: 100%;
 }

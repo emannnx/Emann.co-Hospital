@@ -103,8 +103,10 @@
 .doctor-wrapper-img{
     width: 50%;
     height: 100%;
+    display: flex;
     /* margin-top: 18%; */
     /* background-color: green; */
+    justify-content: flex-end;
 }
 
 .doctor-wrapper-img img{

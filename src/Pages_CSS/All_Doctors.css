@@ -170,6 +170,15 @@
   height: 95px;
   border-radius: 50px;
   background: linear-gradient(to bottom, #AFC1DC, #E2E5ED);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Speciality-img-circle img{
+  width: 62px;
+  height: 72px;
+  object-fit: contain;
 }
 
 

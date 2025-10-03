@@ -10,6 +10,8 @@ import Dermatologist from '../assets/Dermatologist.png'
 import Pediatricians from  '../assets/Pediatricians.png'
 import Neurologist from '../assets/Neurologist.png'
 import Gastroenterologist from '../assets/Gastroenterologist.png'
+import Richard_James from '../assets/Dr._Richard_James.png'
+import Available_dot from '../assets/Green_dot_available.png'
 
 
 const AllDoctors = () => {
@@ -89,6 +91,126 @@ const AllDoctors = () => {
 
             </div>
 
+            {/* Top Doctors to Book */}
+            <div className="doctor-hero-TopDoctors">
+              <h1>Top Doctors to Book</h1>
+              <p>Simply browse through our extensive list of trusted doctors.</p>
+
+             <div className="TopDoctors-Container">
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                  </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p >General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+
+                  <div className="doctor-card">
+                    <div className='doctor_img_container_hero'>
+                      <img src={Richard_James} alt="" />
+                    </div>
+                    <div className='doctor_info_container_name'>
+                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
+                      <h3>Dr. Richard James</h3>
+                      <p>General Physician</p>
+                    </div>
+                   </div>
+             </div>
+
+             <button className='Doctors-more'>more</button>
+
+            </div>
 
         </div>
     </div>

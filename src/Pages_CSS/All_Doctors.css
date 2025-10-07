@@ -1,22 +1,53 @@
-/* Animation for doctor-wrapper */
-.doctor-wrapper {
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
+/* Smooth scroll for the whole page */
+html {
+  scroll-behavior: smooth;
 }
 
+/* Optional: make scroll softer visually */
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* If you want subtle motion feel while scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Animation for doctor-wrapper */
+.doctor-wrapper {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Doctor hero section */
+.doctor-hero {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 80px; /* same as header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+
 @keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .doctor-hero{
     width: 100%;
-    height: auto;
+    height: 100vh;
     /* background-color: red; */
     margin-top: 60px;
     display: flex;
@@ -25,6 +56,7 @@
     justify-content: space-around;
     flex-direction: column;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .doctor-wrapper{

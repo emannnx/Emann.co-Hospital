@@ -13,224 +13,150 @@ import Gastroenterologist from '../assets/Gastroenterologist.png'
 import Richard_James from '../assets/Dr._Richard_James.png'
 import Available_dot from '../assets/Green_dot_available.png'
 import appoinytmentDoctor from '../assets/appointment-doc-img.png'
+import { motion } from "framer-motion"
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
+}
 
 const AllDoctors = () => {
   return (
     <div>
-        <Header />
-        <div className="doctor-hero">
-
-            {/* Hero Section */}
-            <div className="doctor-wrapper">
-                  <div className='doctor-wrapper-text'>
-                     <div className="doctor-wrapper-text-inner">
-                     <h1>Book Appointment <br /> With Trusted Doctors</h1>
-                     <div className="img-text">
-                        <img src={group_profiles} alt="" />
-                        <p>
-                            Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.
-                        </p>
-                     </div>
-                     <div className='Book-appointment-btn'>
-                        <p>Book appointment</p>
-                        <img src={arrow_icon} alt="" />
-                     </div>
-                     </div>
-                  </div>
-                  <div className='doctor-wrapper-img'>
-                    <img src={docctor_hero_img} alt="" />
-                  </div>
+      <Header />
+      <div className="doctor-hero">
+        
+        {/* Hero Section */}
+        <motion.div 
+          className="doctor-wrapper"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <div className='doctor-wrapper-text'>
+            <div className="doctor-wrapper-text-inner">
+              <h1>Book Appointment <br /> With Trusted Doctors</h1>
+              <div className="img-text">
+                <img src={group_profiles} alt="profiles" />
+                <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hassle-free.</p>
+              </div>
+              <div className='Book-appointment-btn'>
+                <p>Book appointment</p>
+                <img src={arrow_icon} alt="arrow" />
+              </div>
             </div>
+          </div>
+          <motion.div 
+            className='doctor-wrapper-img'
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1, transition: { duration: 0.8 } }}
+            viewport={{ once: true }}
+          >
+            <img src={docctor_hero_img} alt="doctor hero" />
+          </motion.div>
+        </motion.div>
 
-            {/* Find by Speciality */}
-            <div className="doctor-hero-Speciality">
-              <h1>Find by Speciality </h1>
-              <p>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
-              <div className="Speciality-Container">
-                <div className="card card1">
-                  <div className="Speciality-img-circle">
-                    <img src={general_physician} alt="" />
-                  </div>
-                  <p>General physician</p>
+        {/* Find by Speciality */}
+        <motion.div 
+          className="doctor-hero-Speciality"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <h1>Find by Speciality</h1>
+          <p>Browse through our extensive list of trusted doctors by speciality.</p>
+          <div className="Speciality-Container">
+            {[ 
+              {img: general_physician, name: "General Physician"},
+              {img: Gynecologist, name: "Gynecologist"},
+              {img: Dermatologist, name: "Dermatologist"},
+              {img: Pediatricians, name: "Pediatricians"},
+              {img: Neurologist, name: "Neurologist"},
+              {img: Gastroenterologist, name: "Gastroenterologist"}
+            ].map((spec, i) => (
+              <motion.div 
+                key={i}
+                className="card"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <div className="Speciality-img-circle">
+                  <img src={spec.img} alt={spec.name} />
                 </div>
-                <div className="card card2">
-                   <div className="Speciality-img-circle">
-                    <img src={Gynecologist} alt="" />
-                  </div>
-                  <p>Gynecologist</p>
-                </div>
+                <p>{spec.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-                <div className="card card3">
-                   <div className="Speciality-img-circle">
-                    <img src={Dermatologist} alt="" />
-                  </div>
-                  <p>Dermatologist</p>
-                </div>
+        {/* Top Doctors to Book */}
+        <motion.div 
+          className="doctor-hero-TopDoctors"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <h1>Top Doctors to Book</h1>
+          <p>Simply browse through our list of trusted doctors.</p>
 
-                <div className="card card4">
-                   <div className="Speciality-img-circle">
-                    <img src={Pediatricians} alt="" />
-                  </div>
-                  <p>Pediatricians</p>
+          <div className="TopDoctors-Container">
+            {[...Array(10)].map((_, i) => (
+              <motion.div 
+                className="doctor-card" 
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <div className='doctor_img_container_hero'>
+                  <img src={Richard_James} alt="doctor" />
                 </div>
-
-                <div className="card card5">
-                   <div className="Speciality-img-circle">
-                    <img src={Neurologist} alt="" />
+                <div className='doctor_info_container_name'>
+                  <div className='Available'> 
+                    <img src={Available_dot} alt="available" />
+                    <p className='Available_p'>Available</p>
                   </div>
-                  <p>Neurologist</p>
+                  <h3>Dr. Richard James</h3>
+                  <p>General Physician</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+          <motion.button 
+            className='Doctors-more'
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            More
+          </motion.button>
+        </motion.div>
 
-                <div className="card card6">
-                   <div className="Speciality-img-circle">
-                    <img src={Gastroenterologist} alt="" />
-                  </div>
-                  <p>Gastroenterologist</p>
+        {/* 100+ Trusted Doctors Section */}
+        <motion.div 
+          className='With_100_Trusted_Doctorss'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <div className="doctor-wrapper">
+            <div className='doctor-wrapper-text'>
+              <div className="doctor-wrapper-text-inner">
+                <h1>Book Appointment <br /> With 100+ Trusted Doctors</h1>
+                <div className='Book-appointment-btn'>
+                  <p>Create account</p>
+                  <img src={arrow_icon} alt="arrow" />
                 </div>
               </div>
-
             </div>
-
-            {/* Top Doctors to Book */}
-            <div className="doctor-hero-TopDoctors">
-              <h1>Top Doctors to Book</h1>
-              <p>Simply browse through our extensive list of trusted doctors.</p>
-
-             <div className="TopDoctors-Container">
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                  </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p >General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-
-                  <div className="doctor-card">
-                    <div className='doctor_img_container_hero'>
-                      <img src={Richard_James} alt="" />
-                    </div>
-                    <div className='doctor_info_container_name'>
-                      <div className='Available'> <img src={Available_dot} alt="" /><p className='Available_p'>Available</p></div>
-                      <h3>Dr. Richard James</h3>
-                      <p>General Physician</p>
-                    </div>
-                   </div>
-             </div>
-
-             <button className='Doctors-more'>more</button>
-
+            <div className='doctor-wrapper-img'>
+              <img src={appoinytmentDoctor} alt="appointment" />
             </div>
-
-            <div className='With_100_Trusted_Doctorss'>
-                <div className="doctor-wrapper">
-                  <div className='doctor-wrapper-text'>
-                     <div className="doctor-wrapper-text-inner">
-                     <h1>Book Appointment <br /> With 100+ Trusted Doctors</h1>
-                     <div className='Book-appointment-btn'>
-                        <p>Create account</p>
-                        <img src={arrow_icon} alt="" />
-                     </div>
-                     </div>
-                  </div>
-                  <div className='doctor-wrapper-img'>
-                    <img src={appoinytmentDoctor} alt="" style={{height: '400px',objectFit: 'contain' }}/>
-                </div>
-            </div>
-            </div>
-
-        </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   )
 }

@@ -12,6 +12,7 @@ import Neurologist from '../assets/Neurologist.png'
 import Gastroenterologist from '../assets/Gastroenterologist.png'
 import Richard_James from '../assets/Dr._Richard_James.png'
 import Available_dot from '../assets/Green_dot_available.png'
+import appoinytmentDoctor from '../assets/appointment-doc-img.png'
 
 
 const AllDoctors = () => {
@@ -210,6 +211,23 @@ const AllDoctors = () => {
 
              <button className='Doctors-more'>more</button>
 
+            </div>
+
+            <div className='With_100_Trusted_Doctorss'>
+                <div className="doctor-wrapper">
+                  <div className='doctor-wrapper-text'>
+                     <div className="doctor-wrapper-text-inner">
+                     <h1>Book Appointment <br /> With 100+ Trusted Doctors</h1>
+                     <div className='Book-appointment-btn'>
+                        <p>Create account</p>
+                        <img src={arrow_icon} alt="" />
+                     </div>
+                     </div>
+                  </div>
+                  <div className='doctor-wrapper-img'>
+                    <img src={appoinytmentDoctor} alt="" style={{height: '400px',objectFit: 'contain' }}/>
+                </div>
+            </div>
             </div>
 
         </div>

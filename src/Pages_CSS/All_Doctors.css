@@ -350,56 +350,68 @@
 
   .doctor-wrapper {
     flex-direction: column;
+    width: 90%;
+    padding: 30px 20px;
+    text-align: center;
     height: auto;  /* remove fixed height */
     padding: 30px 0;
     gap: 20px;
   }
 
   .doctor-wrapper-text {
-    width: 90%;
-    height: auto;
-    background-color: transparent; /* remove debug red */
-    /* text-align: center; */
+    width: 100%;
+    align-items: center;
   }
 
-  .img-text {
-    display: block;       /* keep image + text inline */
-    /* align-items: center; */
-    /* justify-content: center; */
-    gap: 10px;
-    text-align: left;
-    /* background-color: red; */
-    flex-direction: column;
+  .doctor-wrapper-text-inner {
+    align-items: center;
+    text-align: center;
   }
 
   .doctor-wrapper-img {
-    width: 90%;
+    width: 100%;
+    justify-content: center;
   }
 
   .doctor-wrapper-img img {
-    border-radius: 12px; /* keep rounded edges on mobile */
+    border-radius: 12px;
+    width: 90%;
   }
-
 
     .TopDoctors-Container {
     display: flex;
     overflow-x: auto;
     gap: 15px;
-    padding: 20px;
+    scroll-behavior: smooth;
+    padding: 10px 0;
   }
 
-  .doctor-card {
-    flex: 0 0 auto; /* prevents shrinking */
-    width: 274px;
-    height: 385px;
-  }
-
-  /* Optional: hide ugly scroll bar */
   .TopDoctors-Container::-webkit-scrollbar {
     display: none;
   }
 
-  .With_100_Trusted_Doctorss{
+  .img-text{
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    gap: 5px;
+  }
+
+  .doctor-card {
+    flex: 0 0 250px;
+    height: 360px;
+  }
+
+  .With_100_Trusted_Doctorss {
     width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.95rem;
   }
 }

@@ -21,7 +21,6 @@ body {
 }
 
 /* Doctor hero section */
-/* changed something 1 */
 .doctor-hero {
   width: 100%;
   min-height: 100vh;
@@ -31,7 +30,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-
+  
 
 }
 
